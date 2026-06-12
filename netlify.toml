@@ -1,16 +1,25 @@
 [build]
-  publish = "."
+  publish = "spatialtech-backend/public"
 
 [[redirects]]
   from = "/api/*"
-  to = ":env:BACKEND_URL/api/:splat"
+  to = "https://spatialheights-api.onrender.com/api/:splat"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/images/*"
+  to = "/images/:splat"
   status = 200
-  condition = {role = ["admin"]} # This is just an example, but we want a general fallback if using SPA routing
-  # Actually for a static site with multiple pages:
-  # Netlify handles .html automatically if "Pretty URLs" is enabled.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
