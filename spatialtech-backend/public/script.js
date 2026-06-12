@@ -4,6 +4,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---------- Logo Preloader ----------
+  const preloader = document.querySelector('.logo-preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+    }, 800);
+  }
+
   // ---------- Navbar Scroll Behavior ----------
   const navbar = document.querySelector('.navbar');
   // On sub-pages, navbar starts with .scrolled class; on homepage, it toggles

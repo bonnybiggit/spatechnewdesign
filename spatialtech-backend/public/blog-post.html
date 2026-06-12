@@ -14,15 +14,16 @@
     <link rel="icon" type="image/png" href="images/Asset 13.png">
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        .blog-post-section { padding: 80px 0 100px; background: var(--bg-primary); }
-        .blog-post-container { max-width: 800px; margin: 0 auto; }
-        .blog-post-header { margin-bottom: 40px; }
-        .blog-post-category {
-            display: inline-block; padding: 4px 16px; font-size: 0.75rem; font-weight: 600;
-            color: var(--white); background: var(--neon-blue); border-radius: 20px;
-            text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;
-        }
+<style>
+         :root {
+             --neon-blue: #010138;
+             --ice-blue: #010138;
+             --penn-blue: #010138;
+             --spring-green: #010138;
+             --bg-primary: #020245;
+             --white: #ffffff;
+             --font: 'Work Sans', sans-serif;
+         }
         .blog-post-header h1 {
             font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--white);
             line-height: 1.25; margin-bottom: 16px;
@@ -66,6 +67,10 @@
 </head>
 
 <body>
+    <!-- Logo Preloader -->
+    <div class="logo-preloader">
+        <img src="images/logo.png" alt="Spatial Heights Technologies">
+    </div>
     <!-- NAVIGATION -->
     <nav class="navbar scrolled" id="navbar">
         <div class="container">
