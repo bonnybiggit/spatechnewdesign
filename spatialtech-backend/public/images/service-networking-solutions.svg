@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="netGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0057FF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="#081B3A"/>
+  <g stroke="#0057FF" stroke-opacity="0.6" stroke-width="2">
+    <path d="M100 200 L200 100 L300 200 L400 120 L500 200"/>
+  </g>
+  <g fill="#0A84FF">
+    <circle cx="100" cy="200" r="12"/>
+    <circle cx="200" cy="100" r="16"/>
+    <circle cx="300" cy="200" r="14"/>
+    <circle cx="400" cy="120" r="18"/>
+    <circle cx="500" cy="200" r="15"/>
+    <circle cx="150" cy="300" r="10"/>
+    <circle cx="250" cy="340" r="12"/>
+    <circle cx="350" cy="320" r="14"/>
+    <circle cx="450" cy="350" r="10"/>
+  </g>
+  <rect x="120" y="280" width="360" height="80" rx="12" fill="#0057FF" opacity="0.2"/>
+  <rect x="150" y="310" width="60" height="20" fill="#4F9DFF" opacity="0.5" rx="4"/>
+  <rect x="230" y="310" width="60" height="20" fill="#10B981" opacity="0.6" rx="4"/>
+  <rect x="310" y="310" width="60" height="20" fill="#0A84FF" opacity="0.5" rx="4"/>
+  <rect x="390" y="310" width="40" height="20" fill="#4F9DFF" opacity="0.4" rx="4"/>
+</svg>

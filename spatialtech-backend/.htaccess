@@ -1,0 +1,27 @@
+# ============================================================
+# SPATIAL HEIGHTS TECHNOLOGIES — cPanel Deployment Config
+# ============================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # 1. Ensure HTTPS (uncomment if you have SSL installed)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. Route all requests to the Node.js app
+    # This prevents '404' on client-side routes and ensures 
+    # Passenger handles the request.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
+</IfModule>
+
+# Prevent viewing of sensitive files
+<FilesMatch "^\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Set Directory Index
+DirectoryIndex index.html app.js

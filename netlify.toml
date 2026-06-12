@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/api/*"
+  to = ":env:BACKEND_URL/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  condition = {role = ["admin"]} # This is just an example, but we want a general fallback if using SPA routing
+  # Actually for a static site with multiple pages:
+  # Netlify handles .html automatically if "Pretty URLs" is enabled.

@@ -1,0 +1,478 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1).zip
+FileModTime:1728808084
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\OFL.txt
+FileModTime:1728808072
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\README.txt
+FileModTime:1728808072
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Italic
+FamilyName:Work Sans
+StyleName:Italic
+FullName:Work Sans Italic
+MenuName:Work Sans
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\WorkSans-Italic-VariableFont_wght.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:TrueTypeVariableFont
+FileLength:337492
+FileModTime:1725491480
+WeightClass:400
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Regular
+FamilyName:Work Sans
+StyleName:Regular
+FullName:Work Sans Regular
+MenuName:Work Sans
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\WorkSans-VariableFont_wght.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:TrueTypeVariableFont
+FileLength:362304
+FileModTime:1725491480
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Black
+FamilyName:Work Sans
+StyleName:Black
+FullName:Work Sans Black
+MenuName:Work Sans Black
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:192180
+FileModTime:1725491480
+WeightClass:900
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans Black
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-BlackItalic
+FamilyName:Work Sans
+StyleName:Black Italic
+FullName:Work Sans Black Italic
+MenuName:Work Sans Black
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-BlackItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:176956
+FileModTime:1725491480
+WeightClass:900
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans Black
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Bold
+FamilyName:Work Sans
+StyleName:Bold
+FullName:Work Sans Bold
+MenuName:Work Sans
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:191308
+FileModTime:1725491480
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-BoldItalic
+FamilyName:Work Sans
+StyleName:Bold Italic
+FullName:Work Sans Bold Italic
+MenuName:Work Sans
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-BoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:175776
+FileModTime:1725491480
+WeightClass:700
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-ExtraBold
+FamilyName:Work Sans
+StyleName:ExtraBold
+FullName:Work Sans ExtraBold
+MenuName:Work Sans ExtraBold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-ExtraBold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:192652
+FileModTime:1725491480
+WeightClass:800
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans ExtraBold
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-ExtraBoldItalic
+FamilyName:Work Sans
+StyleName:ExtraBold Italic
+FullName:Work Sans ExtraBold Italic
+MenuName:Work Sans ExtraBold
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-ExtraBoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:177164
+FileModTime:1725491480
+WeightClass:800
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans ExtraBold
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-ExtraLight
+FamilyName:Work Sans
+StyleName:ExtraLight
+FullName:Work Sans ExtraLight
+MenuName:Work Sans ExtraLight
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-ExtraLight.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:188592
+FileModTime:1725491480
+WeightClass:250
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans ExtraLight
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-ExtraLightItalic
+FamilyName:Work Sans
+StyleName:ExtraLight Italic
+FullName:Work Sans ExtraLight Italic
+MenuName:Work Sans ExtraLight
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-ExtraLightItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:174540
+FileModTime:1725491480
+WeightClass:250
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans ExtraLight
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Italic
+FamilyName:Work Sans
+StyleName:Italic
+FullName:Work Sans Italic
+MenuName:Work Sans
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:174284
+FileModTime:1725491480
+WeightClass:400
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Light
+FamilyName:Work Sans
+StyleName:Light
+FullName:Work Sans Light
+MenuName:Work Sans Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:188940
+FileModTime:1725491480
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans Light
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-LightItalic
+FamilyName:Work Sans
+StyleName:Light Italic
+FullName:Work Sans Light Italic
+MenuName:Work Sans Light
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-LightItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:174420
+FileModTime:1725491480
+WeightClass:300
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans Light
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Medium
+FamilyName:Work Sans
+StyleName:Medium
+FullName:Work Sans Medium
+MenuName:Work Sans Medium
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:189560
+FileModTime:1725491480
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans Medium
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-MediumItalic
+FamilyName:Work Sans
+StyleName:Medium Italic
+FullName:Work Sans Medium Italic
+MenuName:Work Sans Medium
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-MediumItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:175048
+FileModTime:1725491480
+WeightClass:500
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans Medium
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Regular
+FamilyName:Work Sans
+StyleName:Regular
+FullName:Work Sans Regular
+MenuName:Work Sans
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:188920
+FileModTime:1725491480
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-SemiBold
+FamilyName:Work Sans
+StyleName:SemiBold
+FullName:Work Sans SemiBold
+MenuName:Work Sans SemiBold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-SemiBold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:191020
+FileModTime:1725491480
+WeightClass:600
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans SemiBold
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-SemiBoldItalic
+FamilyName:Work Sans
+StyleName:SemiBold Italic
+FullName:Work Sans SemiBold Italic
+MenuName:Work Sans SemiBold
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-SemiBoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:175508
+FileModTime:1725491480
+WeightClass:600
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans SemiBold
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-Thin
+FamilyName:Work Sans
+StyleName:Thin
+FullName:Work Sans Thin
+MenuName:Work Sans Thin
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-Thin.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:188072
+FileModTime:1725491480
+WeightClass:250
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Work Sans Thin
+NameArray:0,Win,16,Work Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WorkSans-ThinItalic
+FamilyName:Work Sans
+StyleName:Thin Italic
+FullName:Work Sans Thin Italic
+MenuName:Work Sans Thin
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\ASUS\Documents\SHTL\FOLDER\Font\Work_Sans (1)\static\WorkSans-ThinItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:174228
+FileModTime:1725491480
+WeightClass:250
+WidthClass:5
+AngleClass:1
+NameArray:0,Win,1,Work Sans Thin
+NameArray:0,Win,16,Work Sans
+%EndFont
+

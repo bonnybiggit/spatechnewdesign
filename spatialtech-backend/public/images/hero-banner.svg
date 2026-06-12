@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081B3A"/>
+      <stop offset="100%" stop-color="#0B2559"/>
+    </linearGradient>
+    <linearGradient id="gridGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0057FF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+  <g stroke="#0057FF" stroke-opacity="0.15" stroke-width="1">
+    <line x1="0" y1="0" x2="1400" y2="0"/>
+    <line x1="0" y1="100" x2="1400" y2="100"/>
+    <line x1="0" y1="200" x2="1400" y2="200"/>
+    <line x1="0" y1="300" x2="1400" y2="300"/>
+    <line x1="0" y1="400" x2="1400" y2="400"/>
+    <line x1="0" y1="500" x2="1400" y2="500"/>
+    <line x1="0" y1="600" x2="1400" y2="600"/>
+    <line x1="0" y1="700" x2="1400" y2="700"/>
+    <line x1="0" y1="800" x2="1400" y2="800"/>
+    <line x1="0" y1="0" x2="0" y2="900"/>
+    <line x1="100" y1="0" x2="100" y2="900"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="500" y1="0" x2="500" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="700" y1="0" x2="700" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1100" y1="0" x2="1100" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1300" y1="0" x2="1300" y2="900"/>
+  </g>
+  <circle cx="700" cy="380" r="120" fill="none" stroke="#0057FF" stroke-opacity="0.4" stroke-width="40"/>
+  <circle cx="700" cy="380" r="80" fill="#0057FF" fill-opacity="0.2"/>
+  <circle cx="700" cy="380" r="40" fill="#0A84FF"/>
+  <g stroke="#4F9DFF" stroke-opacity="0.6" stroke-width="2">
+    <path d="M700 260 L700 40 L600 40 L600 140 L500 140 L500 240 Z"/>
+    <path d="M700 40 L800 40 L800 140 L900 140 L900 240 Z"/>
+    <path d="M500 340 L500 440 L600 440 L600 340 Z"/>
+    <path d="M800 340 L800 440 L900 440 L900 340 Z"/>
+    <rect x="580" y="420" width="240" height="140" rx="12" fill="#0057FF" fill-opacity="0.15"/>
+    <rect x="580" y="460" width="240" height="30" fill="#0A84FF" fill-opacity="0.4"/>
+    <rect x="600" y="500" width="200" height="80" fill="#4F9DFF" fill-opacity="0.3"/>
+  </g>
+</svg>
