@@ -526,8 +526,10 @@ document.addEventListener('DOMContentLoaded', () => {
         map: texture,
         bumpMap: bumpMap,
         bumpScale: 0.05,
-        specular: new THREE.Color('#2d2d2d'),
-        shininess: 5
+        specular: new THREE.Color('#0055aa'),
+        shininess: 15,
+        emissive: new THREE.Color('#001133'),
+        emissiveIntensity: 0.15
       });
 
       earth = new THREE.Mesh(geometry, material);
@@ -535,14 +537,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const atmosGeometry = new THREE.SphereGeometry(1.05, 64, 64);
       const atmosMaterial = new THREE.MeshPhongMaterial({
-        color: new THREE.Color('#0061FF'),
+        color: new THREE.Color('#0077ff'),
         transparent: true,
-        opacity: 0.2,
+        opacity: 0.25,
         side: THREE.BackSide,
         blending: THREE.AdditiveBlending
       });
       atmosphere = new THREE.Mesh(atmosGeometry, atmosMaterial);
       scene.add(atmosphere);
+
+      // Outer glow layer
+      const glowGeometry = new THREE.SphereGeometry(1.12, 64, 64);
+      const glowMaterial = new THREE.MeshPhongMaterial({
+        color: new THREE.Color('#0099ff'),
+        transparent: true,
+        opacity: 0.08,
+        side: THREE.BackSide,
+        blending: THREE.AdditiveBlending
+      });
+      const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+      scene.add(glow);
 
       const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
       scene.add(ambientLight);
