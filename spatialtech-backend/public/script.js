@@ -493,139 +493,116 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', highlightNav);
   }
 
-  // ---------- Three.js 3D Globe Implementation ----------
+  // ---------- Photorealistic 3D Earth Implementation ----------
   const globeContainer = document.getElementById('heroGlobe');
   if (globeContainer && isHomepage && typeof THREE !== 'undefined') {
-    let scene, camera, renderer, earth, atmosphere;
-    let isHovered = false;
+    globeContainer.innerHTML = '';
+    
+    const scene = new THREE.Scene();
+    const width = globeContainer.offsetWidth;
+    const height = globeContainer.offsetHeight;
+    const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+    camera.position.z = 2.5;
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(width, height);
+    globeContainer.appendChild(renderer.domElement);
+
+    const earthGroup = new THREE.Group();
+    scene.add(earthGroup);
+
+    const textureLoader = new THREE.TextureLoader();
+    // High-res earth texture
+    const earthMap = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
+    const bumpMap = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-topology.png');
+    
+    const earthGeometry = new THREE.SphereGeometry(1, 64, 64);
+    const earthMaterial = new THREE.MeshPhongMaterial({
+      map: earthMap,
+      bumpMap: bumpMap,
+      bumpScale: 0.05,
+      specular: new THREE.Color('grey')
+    });
+    const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+    earthGroup.add(earth);
+
+    // Atmosphere glow
+    const atmosGeometry = new THREE.SphereGeometry(1.03, 64, 64);
+    const atmosMaterial = new THREE.MeshPhongMaterial({
+      color: new THREE.Color('#00d4ff'),
+      transparent: true,
+      opacity: 0.15,
+      side: THREE.BackSide,
+      blending: THREE.AdditiveBlending
+    });
+    const atmosphere = new THREE.Mesh(atmosGeometry, atmosMaterial);
+    earthGroup.add(atmosphere);
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+    scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+    directionalLight.position.set(5, 3, 5);
+    scene.add(directionalLight);
+    
+    const backLight = new THREE.DirectionalLight(0x00d4ff, 0.5);
+    backLight.position.set(-5, -3, -5);
+    scene.add(backLight);
+
+    // Responsive
+    window.addEventListener('resize', () => {
+      const newWidth = globeContainer.offsetWidth;
+      const newHeight = globeContainer.offsetHeight;
+      if (newWidth && newHeight) {
+        camera.aspect = newWidth / newHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(newWidth, newHeight);
+      }
+    });
+
+    // Interaction
     let isDragging = false;
     let previousMouseX = 0;
     let targetRotationY = 0;
     let currentRotationY = 0;
 
-    const initGlobe = () => {
-      scene = new THREE.Scene();
-
-      const width = globeContainer.offsetWidth;
-      const height = globeContainer.offsetHeight;
-      camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-      camera.position.z = 2.5;
-
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.setSize(width, height);
-      globeContainer.appendChild(renderer.domElement);
-
-      const geometry = new THREE.SphereGeometry(1, 64, 64);
-      const textureLoader = new THREE.TextureLoader();
-
-      const texture = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
-      const bumpMap = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-topology.png');
-
-      const material = new THREE.MeshPhongMaterial({
-        map: texture,
-        bumpMap: bumpMap,
-        bumpScale: 0.05,
-        specular: new THREE.Color('#0055aa'),
-        shininess: 15,
-        emissive: new THREE.Color('#001133'),
-        emissiveIntensity: 0.15
-      });
-
-      earth = new THREE.Mesh(geometry, material);
-      scene.add(earth);
-
-      const atmosGeometry = new THREE.SphereGeometry(1.05, 64, 64);
-      const atmosMaterial = new THREE.MeshPhongMaterial({
-        color: new THREE.Color('#0077ff'),
-        transparent: true,
-        opacity: 0.25,
-        side: THREE.BackSide,
-        blending: THREE.AdditiveBlending
-      });
-      atmosphere = new THREE.Mesh(atmosGeometry, atmosMaterial);
-      scene.add(atmosphere);
-
-      // Outer glow layer
-      const glowGeometry = new THREE.SphereGeometry(1.12, 64, 64);
-      const glowMaterial = new THREE.MeshPhongMaterial({
-        color: new THREE.Color('#0099ff'),
-        transparent: true,
-        opacity: 0.08,
-        side: THREE.BackSide,
-        blending: THREE.AdditiveBlending
-      });
-      const glow = new THREE.Mesh(glowGeometry, glowMaterial);
-      scene.add(glow);
-
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
-      scene.add(ambientLight);
-
-      const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
-      directionalLight.position.set(5, 3, 5);
-      scene.add(directionalLight);
-
-      window.addEventListener('resize', () => {
-        const newWidth = globeContainer.offsetWidth;
-        const newHeight = globeContainer.offsetHeight;
-        if (newWidth && newHeight) {
-          camera.aspect = newWidth / newHeight;
-          camera.updateProjectionMatrix();
-          renderer.setSize(newWidth, newHeight);
-        }
-      });
-
-      globeContainer.addEventListener('mouseenter', () => { isHovered = true; });
-      globeContainer.addEventListener('mouseleave', () => {
-        isHovered = false;
-        isDragging = false;
-      });
-
-      const onDown = (e) => {
-        isDragging = true;
-        previousMouseX = e.touches ? e.touches[0].clientX : e.clientX;
-      };
-
-      const onMove = (e) => {
-        if (!isDragging) return;
-        const x = e.touches ? e.touches[0].clientX : e.clientX;
-        const deltaX = x - previousMouseX;
-        targetRotationY += deltaX * 0.005;
-        previousMouseX = x;
-      };
-
-      const onUp = () => { isDragging = false; };
-
-      globeContainer.addEventListener('mousedown', onDown);
-      window.addEventListener('mousemove', onMove);
-      window.addEventListener('mouseup', onUp);
-
-      globeContainer.addEventListener('touchstart', onDown, { passive: true });
-      window.addEventListener('touchmove', onMove, { passive: true });
-      window.addEventListener('touchend', onUp);
-
-      animate();
+    const onDown = (e) => {
+      isDragging = true;
+      previousMouseX = e.touches ? e.touches[0].clientX : e.clientX;
     };
+    const onMove = (e) => {
+      if (!isDragging) return;
+      const x = e.touches ? e.touches[0].clientX : e.clientX;
+      const deltaX = x - previousMouseX;
+      targetRotationY += deltaX * 0.005;
+      previousMouseX = x;
+    };
+    const onUp = () => { isDragging = false; };
+
+    globeContainer.addEventListener('mousedown', onDown);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+    globeContainer.addEventListener('touchstart', onDown, { passive: true });
+    window.addEventListener('touchmove', onMove, { passive: true });
+    window.addEventListener('touchend', onUp);
 
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Always auto-rotate the globe continuously
-      const autoRotateSpeed = 0.003;
-      earth.rotation.y += autoRotateSpeed;
+      // Auto-rolling (rotating)
+      const autoRotateSpeed = 0.002;
+      earthGroup.rotation.y += autoRotateSpeed;
 
-      // Apply any drag offset smoothly
+      // Drag influence
       const dragDelta = (targetRotationY - currentRotationY) * 0.1;
-      earth.rotation.y += dragDelta;
+      earthGroup.rotation.y += dragDelta;
       currentRotationY += dragDelta;
-
-      const pulseTime = Date.now() * 0.001;
-      atmosphere.scale.setScalar(1 + Math.sin(pulseTime) * 0.02);
 
       renderer.render(scene, camera);
     };
-
-    initGlobe();
+    animate();
   }
 
   // ---------- Populate Country Dropdown ----------
