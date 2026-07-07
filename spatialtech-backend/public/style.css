@@ -110,7 +110,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #010138 0%, #0077ff 100%);
+  background: linear-gradient(135deg, #f4f9ff 0%, #dcefff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,21 +119,16 @@ h6 {
 }
 
 .logo-preloader img {
-  width: 120px;
+  width: min(240px, 70vw);
   height: auto;
-  filter: brightness(0) invert(1);
+  max-height: 220px;
+  object-fit: contain;
   animation: pulse-scale 1.5s ease-in-out infinite;
 }
 
 .logo-preloader.fade-out {
   opacity: 0;
   visibility: hidden;
-}
-
-.logo-preloader img {
-  width: 120px;
-  height: auto;
-  animation: pulse-scale 1.5s ease-in-out infinite;
 }
 
 @keyframes pulse-scale {
@@ -458,7 +453,9 @@ h6 {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
+  padding: 140px 0 80px;
   background: linear-gradient(135deg, #010138 0%, #001235 40%, #003380 100%);
 }
 
@@ -472,6 +469,7 @@ h6 {
   z-index: 1;
   opacity: 1;
 }
+
 
 .hero-bg {
   display: none;
@@ -501,14 +499,17 @@ h6 {
   z-index: 5;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
-  padding-top: 100px;
+  min-height: calc(100vh - 220px);
 }
 
 .hero-content {
   flex: 1;
   min-width: 0;
-  max-width: 650px;
+  max-width: 760px;
+  text-align: center;
+  padding: 0;
 }
 
 /* 3D Globe Container (Hidden — using pre-rendered cinematic image) */
@@ -531,18 +532,18 @@ h6 {
 .hero-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-xl);
-  padding: 8px 20px;
-  margin-bottom: 28px;
+  padding: 10px 22px;
+  margin-bottom: 24px;
   font-size: 0.78rem;
   font-weight: 600;
   color: #ffffff;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  animation: pulse-badge 3s ease-in-out infinite;
 }
 
 @keyframes pulse-badge {
@@ -563,11 +564,11 @@ h6 {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-size: clamp(2.7rem, 5.2vw, 4.4rem);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   letter-spacing: -0.5px;
 }
 
@@ -576,11 +577,11 @@ h6 {
 }
 
 .hero-description {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.8;
-  margin-bottom: 40px;
-  max-width: 580px;
+  margin: 0 auto 36px;
+  max-width: 650px;
 }
 
 .hero-buttons {
@@ -588,6 +589,7 @@ h6 {
   gap: 18px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-stats {
@@ -2017,8 +2019,8 @@ h6 {
   color: #ffffff;
 }
 
-  .hero-content {
-    padding-top: 80px;
+  .hero {
+    padding: 130px 0 70px;
   }
 
   .hero h1 {
@@ -2029,11 +2031,12 @@ h6 {
     flex-direction: column;
     text-align: center;
     gap: 30px;
-    padding-top: 120px;
+    min-height: auto;
   }
 
   .hero-content {
     order: 1;
+    max-width: 100%;
   }
 
   .hero-globe {
